@@ -1,5 +1,5 @@
+from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 from users.models import User
-from reviews.models import Category, Genre, Title, Review, Comment, GenreTitle
 
 
 def category_create(row):

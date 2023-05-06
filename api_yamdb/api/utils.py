@@ -1,12 +1,11 @@
-from django.core.mail import send_mail
 from django.contrib.auth.tokens import default_token_generator
+from django.core.mail import send_mail
 
 from api_yamdb.settings import DEFAULT_FROM_EMAIL
 
 
 def generate_confirmation_code(user):
-    confirmation_code = default_token_generator.make_token(user)
-    return confirmation_code
+    return default_token_generator.make_token(user)
 
 
 def send_email_with_verification_code(user):
